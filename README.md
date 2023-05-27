@@ -42,3 +42,18 @@ We import the KNeighbosClassifier class from the sklearn library and then create
 
 By changing the neighbors_n parameter, we get results for different values.
 
+# LgisticRegression
+Explanation of Logistic Regression model:
+Logistic regression is a supervised learning classification algorithm that is used to predict the probability of a target variable.
+We import the LogisticResgressionClassifier class from the sklearn library and then create a new object from it and store it in clf. We put 0.4=size_train and 0.2=size_test.
+We use these numbers to be complementary.
+
+# DecisionTree Classifier
+Explanation of the DecisionTree model:
+Same as SVM algorithm, the Decisiontree algorithm can handle classification, regression, and even tasks with multiple outputs. These algorithms are very powerful and can be used in complex datasets.
+
+We import the DecisionTreeClassifier class from the sklearn library. Then we create a new object from it and store it in clf. We put 0.4 = size_train and 0.2 = size_test. We choose numbers that are complementary and use 100% of the dataset.
+
+
+# Conclusion
+According to the evaluation of the hobbies, it can be concluded that the SVM model has performed better than other models and has given us the best evaluation.
