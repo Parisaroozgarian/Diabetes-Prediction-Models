@@ -33,4 +33,12 @@ In the SVM code, we import the SVC class from the sklearn library and then creat
 
 In this class, we help to improve the evaluation result by changing the kernel parameter
 
+# KNN
+Explanation of the KNN model:
+KNN (nearest neighbor-K) is a type of machine learning algorithm
+It is supervised, which is used in both classification problems and predictive regression problems.
+
+We import the KNeighbosClassifier class from the sklearn library and then create a new object from it and store it in clf. In this class, we try to improve the data evaluation result by changing the neighbors_n parameter.We put 0.4=size_train and 0.2=size_test.
+
+By changing the neighbors_n parameter, we get results for different values.
 
