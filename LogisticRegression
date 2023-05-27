@@ -1,0 +1,24 @@
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import precision_score
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
+import pandas as pd
+data = pd.read_csv('/kaggle/input/pima-indians-diabetes-database/diabetes.csv') 
+data.head()
+clf = LogisticRegression()
+x_train=data[['Pregnancies','Glucose','BloodPressure','SkinThickness','Insulin','BMI','DiabetesPedigreeFunction','Age']]
+y_train=data['Outcome']
+x, x_test, y, y_test = train_test_split(x_train, y_train,random_state=0, train_size = 0.4, test_size = 0.2)
+clf.fit(x,y)
+clf.predict(x_test)
+pred=clf.predict(x_test)
+score=cross_val_score(clf,x,y,cv=5,scoring='f1_weighted')
+print(score.mean())
+print('Recall:',recall_score(y_test,pred))
+print('Precision:',precision_score(y_test,pred))
+print('Accuracy:',accuracy_score(y_test,pred))
+print('f1_score:',f1_score(y_test,pred,average='weighted'))
