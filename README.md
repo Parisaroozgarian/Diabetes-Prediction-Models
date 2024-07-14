@@ -1,59 +1,50 @@
-# DiabetesDataset-SVM-KNN-LogisticRegres-Decisiontreeclassifiersion
-The dataset used is, the dataset of information related to diabetic patients of a hospital. label is this data,
-Outcome, which takes two values of 0 and 1, and indicates whether or not the patient has the disease.
-It is diabetes. We divide this dataset into two parts, Train and Test.Using 4 methods, we design models based on dataset data :
-- SVM
-- KNN
-- Logistic Regression 
-- Decision Tree
+# Diabetes Prediction Models 🩺
 
+## 📋 Project Overview
 
-To predict whether or not a patient will have diabetes with 4 methods. Then using evaluation methods module (f1_score, Precision, Recall, Accuracy) We evaluated each one and try to get the best possible result by changing the parameters 
-Features of this dataset :
-1. Pregnancies
-2. Glucose 
-3. Blood Pressure
-4. Skin Thickness
-5. Insulin
-6. BMI 
-7. Diabetes Pedigree Function 
-8. Age
+Implement machine learning models to predict diabetes using the Diabetes dataset. Evaluate each model's performance using metrics like F1 score, Precision, Recall, and Accuracy.
 
-# SVM
-Explanation of the SVM model:
-SVM, or support vector machine, is a classifier or boundary that determines the best classification and separation between data by the criterion of placing support vectors.
+## 🛠️ Project Tasks
 
-Its purpose is to find the best border among the data in such a way that it has the greatest possible distance from all categories.
-To use SVM in Python, we use the Python machine learning library named scikit-learn .
+### Task 1: Dataset Description and Preparation
 
-All kernels and mapping functions are prepared. The three functions NuSVC, LinearSVC, SVC are responsible for the main task of classification.
-In the SVM code, we import the SVC class from the sklearn library and then create a new object and We store it inside the clf variable. We change the kernel parameter from its default value of 'rbf' to the value of 'linear'.Because it is more accurate. We put size_train=0.4 and size_test=0.2.
+- **Dataset**: Utilize the Diabetes dataset containing medical information with the `Outcome` label (0 or 1).
+- **Splitting**: Divide the dataset into training and testing sets (`train_test_split` function with `test_size=0.2`).
 
-(kernel='rbf' → kernel='linear')
+### Task 2: Model Implementation and Evaluation
 
-In this class, we help to improve the evaluation result by changing the kernel parameter
+- **SVM (Support Vector Machine)**:
+  - Use `SVC` from `sklearn.svm` with `kernel='linear'` for improved accuracy.
+  - Evaluate using F1 score, Precision, Recall, and Accuracy.
 
-# KNN
-Explanation of the KNN model:
-KNN (nearest neighbor-K) is a type of machine learning algorithm
-It is supervised, which is used in both classification problems and predictive regression problems.
+- **KNN (K-Nearest Neighbors)**:
+  - Use `KNeighborsClassifier` from `sklearn.neighbors`.
+  - Experiment with different values of `n_neighbors` for optimal results.
 
-We import the KNeighbosClassifier class from the sklearn library and then create a new object from it and store it in clf. In this class, we try to improve the data evaluation result by changing the neighbors_n parameter.We put 0.4=size_train and 0.2=size_test.
+- **Logistic Regression**:
+  - Employ `LogisticRegression` from `sklearn.linear_model`.
+  - Adjust parameters and evaluate model performance.
 
-By changing the neighbors_n parameter, we get results for different values.
+- **Decision Tree**:
+  - Implement `DecisionTreeClassifier` from `sklearn.tree`.
+  - Tune hyperparameters for better training efficiency.
 
-# LgisticRegression
-Explanation of Logistic Regression model:
-Logistic regression is a supervised learning classification algorithm that is used to predict the probability of a target variable.
-We import the LogisticResgressionClassifier class from the sklearn library and then create a new object from it and store it in clf. We put 0.4=size_train and 0.2=size_test.
-We use these numbers to be complementary.
+## 🔑 Key Skills
 
-# DecisionTree Classifier
-Explanation of the DecisionTree model:
-Same as SVM algorithm, the Decisiontree algorithm can handle classification, regression, and even tasks with multiple outputs. These algorithms are very powerful and can be used in complex datasets.
+- Python Programming
+- Machine Learning (SVM, KNN, Logistic Regression, Decision Tree)
+- Evaluation Metrics (F1 score, Precision, Recall, Accuracy)
 
-We import the DecisionTreeClassifier class from the sklearn library. Then we create a new object from it and store it in clf. We put 0.4 = size_train and 0.2 = size_test. We choose numbers that are complementary and use 100% of the dataset.
+## 🛠️ Tools
 
+<img src="https://user-images.githubusercontent.com/84391594/152705364-f16bb223-41aa-4510-8113-51171dfe9953.png" height="75">
+<img src="https://user-images.githubusercontent.com/84391594/152705271-083f8784-b3c9-4065-9733-ea3fa8ad5a7a.png" height="75">
+<img src="https://user-images.githubusercontent.com/84391594/152705273-adffe1bf-b509-44d0-b3ac-671cce5071df.svg" height="75">
 
-# Conclusion
-According to the evaluation of the hobbies, it can be concluded that the SVM model has performed better than other models and has given us the best evaluation.
+## 📖 Libraries
+
+<p align="left">
+  <img src="https://user-images.githubusercontent.com/84391594/152706127-ce41990f-2588-472a-b5df-6b403a5947e6.png" height="35">
+  <img src="https://user-images.githubusercontent.com/84391594/152706130-5577011e-ecb3-47aa-af73-f6bd1bda05bc.png" height="35">
+  <img src="https://user-images.githubusercontent.com/84391594/152706132-5939da7e-7d1e-43b8-9c46-2d3fe5198dda.png" height="35">
+</p>
