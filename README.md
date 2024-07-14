@@ -30,15 +30,17 @@ Implement machine learning models to predict diabetes using the Diabetes dataset
   - Tune hyperparameters for better training efficiency.
 
 ## 🔑 Key Skills
+
 - Python Programming
 - Machine Learning (SVM, KNN, Logistic Regression, Decision Tree)
 - Evaluation Metrics (F1 score, Precision, Recall, Accuracy)
 
 ## 🛠️ Tools
-
-<img src="https://user-images.githubusercontent.com/84391594/152706127-ce41990f-2588-472a-b5df-6b403a5947e6.png" height="75">
-<img src="https://user-images.githubusercontent.com/84391594/152706130-5577011e-ecb3-47aa-af73-f6bd1bda05bc.png" height="75">
-<img src="https://user-images.githubusercontent.com/84391594/152706132-5939da7e-7d1e-43b8-9c46-2d3fe5198dda.png" height="75">
+<p align="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1200px-Jupyter_logo.svg.png" height="75">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="75">  
+  <img src="https://www.kaggle.com/static/images/site-logo.png" height="75">
+</p>
 
 ## 📖 Libraries
 <p align="left">
