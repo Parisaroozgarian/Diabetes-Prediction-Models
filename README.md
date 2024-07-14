@@ -44,7 +44,12 @@ Implement machine learning models to predict diabetes using the Diabetes dataset
 
 ## 📖 Libraries
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/84391594/152706127-ce41990f-2588-472a-b5df-6b403a5947e6.png" height="35">
-  <img src="https://user-images.githubusercontent.com/84391594/152706130-5577011e-ecb3-47aa-af73-f6bd1bda05bc.png" height="35">
-  <img src="https://user-images.githubusercontent.com/84391594/152706132-5939da7e-7d1e-43b8-9c46-2d3fe5198dda.png" height="35">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" height="75">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" height="75">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/NumPy_logo.svg" height="75">
+  <img src="https://matplotlib.org/stable/_images/sphx_glr_logos2_003.png" height="75">
+  <img src="https://seaborn.pydata.org/_images/logo-wide-lightbg.svg" height="75">
 </p>
+
+
+
