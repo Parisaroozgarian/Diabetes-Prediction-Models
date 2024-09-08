@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Model Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="content-wrapper">
+        <!-- Header with Logo and Menu -->
+        <header>
+            <div class="header-content">
+                <!-- Logo Section -->
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='images/machine-learning.png') }}" alt="ML Insights Logo">
+                </div>
+                <!-- Navigation Bar -->
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#model-results">Model Results</a></li>
+                        <li><a href="#input-form">Run Models</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero" id="home">
+                <h1>Welcome to Machine Learning Insights</h1>
+                <p>We provide cutting-edge machine learning model evaluation and results.</p>
+                <a href="#model-results" class="cta-btn">Explore Models</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Model Selection Form -->
+            <section id="input-form" class="section">
+                <h2>Select Parameters</h2>
+                <form id="model-form" class="form-container">
+                    <!-- Decision Tree Option -->
+                    <div class="form-group">
+                        <label class="radio-label">
+                            <input type="radio" name="model" value="decision_tree" checked> 
+                            Decision Tree
+                        </label>
+                        <label for="tree-max-depth" class="input-label">Max Depth (optional):</label>
+                        <input type="number" id="tree-max-depth" name="max_depth" class="input-field" placeholder="Enter max depth">
+                    </div>
+                
+                    <!-- K-Nearest Neighbors Option -->
+                    <div class="form-group">
+                        <label class="radio-label">
+                            <input type="radio" name="model" value="knn"> 
+                            K-Nearest Neighbors (KNN)
+                        </label>
+                        <label for="knn-n-neighbors" class="input-label">n_neighbors (optional):</label>
+                        <input type="number" id="knn-n-neighbors" name="n_neighbors" class="input-field" placeholder="Enter neighbors count">
+                    </div>
+                
+                    <!-- Logistic Regression Option -->
+                    <div class="form-group">
+                        <label class="radio-label">
+                            <input type="radio" name="model" value="logistic_regression"> 
+                            Logistic Regression
+                        </label>
+                    </div>
+                
+                    <!-- Support Vector Machine Option -->
+                    <div class="form-group">
+                        <label class="radio-label">
+                            <input type="radio" name="model" value="svm"> 
+                            Support Vector Machine (SVM)
+                        </label>
+                    </div>
+                </form>
+                
+                
+            </section>
+
+            <!-- Model Results Section -->
+            <section id="model-results" class="section model-section">
+                <h2>Model Evaluation Results</h2>
+                <div class="results-grid" id="results-section">
+                    <!-- Decision Tree -->
+                    <div class="result-card hidden" id="decision-tree-card">
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename='images/decision tree.png') }}" alt="Decision Tree Icon">
+                        </div>
+                        <h3>Decision Tree</h3>
+                        <p id="decision-tree-results">
+                            F1 Score: 0.00<br>
+                            Accuracy: 0.00
+                        </p>
+                    </div>
+                
+                    <!-- K-Nearest Neighbors -->
+                    <div class="result-card hidden" id="knn-card">
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename='images/KNN.png') }}" alt="KNN Icon">
+                        </div>
+                        <h3>K-Nearest Neighbors (KNN)</h3>
+                        <p id="knn-results">
+                            F1 Score: 0.00<br>
+                            Accuracy: 0.00
+                        </p>
+                    </div>
+                
+                    <!-- Logistic Regression -->
+                    <div class="result-card hidden" id="logistic-regression-card">
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename='images/logisticregression.png') }}" alt="Logistic Regression Icon">
+                        </div>
+                        <h3>Logistic Regression</h3>
+                        <p id="logistic-regression-results">
+                            F1 Score: 0.00<br>
+                            Accuracy: 0.00
+                        </p>
+                    </div>
+                
+                    <!-- Support Vector Machine -->
+                    <div class="result-card hidden" id="svm-card">
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename='images/svm.png') }}" alt="SVM Icon">
+                        </div>
+                        <h3>Support Vector Machine (SVM)</h3>
+                        <p id="svm-results">
+                            F1 Score: 0.00<br>
+                            Accuracy: 0.00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="cta-btn-container">
+                    <button id="run-models" class="cta-btn">Run Models</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section">
+            <h2>Contact Us</h2>
+            <p>If you have any inquiries or feedback, feel free to get in touch.</p>
+            <form action="/submit-form" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 ML Insights. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
